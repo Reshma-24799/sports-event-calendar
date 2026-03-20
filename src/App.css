@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #4D2600;
+  --bg-gradient: linear-gradient(90deg, #7A3D00 0%, #4D2600 50%, #2B1500 100%);
+  --text-main: #ffffff;
+  --accent-color: #ff4500; /* Sportradar-style orange/red */
+  --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
