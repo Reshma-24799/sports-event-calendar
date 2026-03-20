@@ -10,7 +10,7 @@ const Navbar=()=>{
                         <NavLink 
                             to="/" 
                             className={({ isActive }) => 
-                                `px-4 py-2 rounded-md transition-colors ${isActive ? 'bg-[#7A3D00]  font-semibold' : 'bg-[#4D2600]'}`
+                                `px-4 py-2 rounded-md font-semibold transition-colors ${isActive ? 'bg-[#7A3D00]  ' : 'bg-[#4D2600]'}`
                             }
                         >
                             Calendar
@@ -18,7 +18,7 @@ const Navbar=()=>{
                         <NavLink 
                             to="/add-event" 
                             className={({ isActive }) => 
-                                `px-4 py-2 rounded-md transition-colors ${isActive ? 'bg-[#7A3D00]  font-semibold' : 'bg-[#4D2600]'}`
+                                `px-4 py-2 rounded-md font-semibold transition-colors ${isActive ? 'bg-[#7A3D00]  ' : 'bg-[#4D2600]'}`
                             }
                         >
                             Add Event
