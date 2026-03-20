@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './pages/Navbar'
 import CalendarPage from './pages/CalendarPage'
 import AddEventPage from './pages/AddEventPage'
+import DetailPage from './pages/DetailPage'
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<CalendarPage />} />
-          {/* <Route path="/event/:id" element={<DetailPage />} /> */}
+          <Route path="/event/:id" element={<DetailPage />} />
           <Route path="/add-event" element={<AddEventPage />} />
         </Routes>
      </BrowserRouter>

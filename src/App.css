@@ -45,3 +45,9 @@ body {
   border-radius: 50%;
   margin: 0 auto;
 }
+
+.detail-card {
+  padding: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
