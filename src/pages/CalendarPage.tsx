@@ -4,22 +4,23 @@ import EventSidePanel from '../components/EventSidePanel';
 import { useEvents } from '../context/EventContext';
 
 const CalendarPage = () => {
-    const [currentDate, setCurrentDate] = useState(new Date(2024, 0, 1));
+    // const [currentDate, setCurrentDate] = useState(new Date(2024, 0, 1));
+    const [currentDate] = useState(new Date(2026, 2, 1));
     const [selectedDate, setSelectedDate] = useState<string | null>(null);
     const { events } = useEvents();
 
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth();
 
-    const nextMonth = () => {
-        setCurrentDate(new Date(year, month + 1, 1));
-        setSelectedDate(null);
-    };
+    // const nextMonth = () => {
+    //     setCurrentDate(new Date(year, month + 1, 1));
+    //     setSelectedDate(null);
+    // };
 
-    const prevMonth = () => {
-        setCurrentDate(new Date(year, month - 1, 1));
-        setSelectedDate(null);
-    };
+    // const prevMonth = () => {
+    //     setCurrentDate(new Date(year, month - 1, 1));
+    //     setSelectedDate(null);
+    // };
 
     const selectedEvents = selectedDate
         ? events
@@ -34,14 +35,14 @@ const CalendarPage = () => {
                     <h1 className="text-3xl font-bold text-[#7A3D00]">
                         {currentDate.toLocaleString('default', { month: 'long' })} {year}
                     </h1>
-                    <div className="flex gap-2">
+                    {/* <div className="flex gap-2">
                         <button onClick={prevMonth} className="px-4 py-2 font-semibold bg-[#7A3D00] text-white rounded-md  ">
                             Prev
                         </button>
                         <button onClick={nextMonth} className="px-4 py-2 font-semibold bg-[#7A3D00] text-white rounded-md ">
                             Next
                         </button>
-                    </div>
+                    </div> */}
                 </div>
 
                 <Calendar 
