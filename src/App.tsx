@@ -4,19 +4,22 @@ import Navbar from './pages/Navbar'
 import CalendarPage from './pages/CalendarPage'
 import AddEventPage from './pages/AddEventPage'
 import DetailPage from './pages/DetailPage'
+import { EventProvider } from './context/EventContext'
 
 function App() {
 
   return (
     <div className='min-h-screen'>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<CalendarPage />} />
-          <Route path="/event/:id" element={<DetailPage />} />
-          <Route path="/add-event" element={<AddEventPage />} />
-        </Routes>
-     </BrowserRouter>
+      <EventProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<CalendarPage />} />
+            <Route path="/event/:id" element={<DetailPage />} />
+            <Route path="/add-event" element={<AddEventPage />} />
+          </Routes>
+       </BrowserRouter>
+      </EventProvider>
     </div>
   )
 }

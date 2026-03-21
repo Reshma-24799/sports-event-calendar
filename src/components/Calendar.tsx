@@ -1,4 +1,4 @@
-import eventsData from '../data/events.json';
+import { useEvents } from '../context/EventContext';
 
 type CalendarProps = {
     year: number;
@@ -8,6 +8,7 @@ type CalendarProps = {
 };
 
 const Calendar = ({ year, month, selectedDate, onDateSelect }: CalendarProps) => {
+    const { events } = useEvents(); 
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     const firstDayOfMonth = new Date(year, month, 1).getDay();
 
@@ -22,7 +23,7 @@ const Calendar = ({ year, month, selectedDate, onDateSelect }: CalendarProps) =>
 
      const hasEvent = (day: number) => {
         const dateStr = formatDate(day);
-        return eventsData.data.some(event => event.dateVenue === dateStr);
+        return events.some(event => event.dateVenue === dateStr);
     };
 
     return (

@@ -1,13 +1,13 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import eventsData from '../data/events.json';
+import { useEvents } from '../context/EventContext';
 
 const DetailPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
+    const { events } = useEvents();
 
-    // Parse the ID back to a number to use as index
     const eventIndex = parseInt(id || '-1');
-    const event = eventsData.data[eventIndex];
+    const event = events[eventIndex];
 
     if (!event) {
         return (

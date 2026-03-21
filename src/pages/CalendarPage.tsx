@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import Calendar from '../components/Calendar';
 import EventSidePanel from '../components/EventSidePanel';
-import eventsData from '../data/events.json';
+import { useEvents } from '../context/EventContext';
 
 const CalendarPage = () => {
     const [currentDate, setCurrentDate] = useState(new Date(2024, 0, 1));
     const [selectedDate, setSelectedDate] = useState<string | null>(null);
+    const { events } = useEvents();
 
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth();
@@ -21,9 +22,9 @@ const CalendarPage = () => {
     };
 
     const selectedEvents = selectedDate
-        ? eventsData.data
-            .filter(event => event.dateVenue === selectedDate)
+        ? events
             .map((event, index) => ({ ...event, originalIndex: index }))
+            .filter(event => event.dateVenue === selectedDate)
         : [];
 
     return (
