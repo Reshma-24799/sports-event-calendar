@@ -48,7 +48,7 @@ const EventForm = ({ onSubmit }: EventFormProps) => {
             date: '',
             time: '',
             competition: 'Custom Friendly',
-            season: '2024'
+            season: '2026'
         });
     };
 
@@ -59,8 +59,9 @@ const EventForm = ({ onSubmit }: EventFormProps) => {
             <div className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                        <label className="form-label">Home Team</label>
+                        <label htmlFor="homeTeam" className="form-label">Home Team</label>
                         <input 
+                            id="homeTeam"
                             required 
                             type="text" 
                             name="homeTeam"
@@ -71,8 +72,9 @@ const EventForm = ({ onSubmit }: EventFormProps) => {
                         />
                     </div>
                     <div>
-                        <label className="form-label">Away Team</label>
+                        <label htmlFor="awayTeam" className="form-label">Away Team</label>
                         <input 
+                            id="awayTeam"
                             required 
                             type="text" 
                             name="awayTeam"
@@ -85,8 +87,9 @@ const EventForm = ({ onSubmit }: EventFormProps) => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                        <label className="form-label">Date</label>
+                        <label htmlFor="date" className="form-label">Date</label>
                         <input 
+                            id="date"
                             required 
                             type="date" 
                             name="date"
@@ -96,8 +99,9 @@ const EventForm = ({ onSubmit }: EventFormProps) => {
                         />
                     </div>
                     <div>
-                        <label className="form-label">Time (UTC)</label>
+                        <label htmlFor="time" className="form-label">Time (UTC)</label>
                         <input 
+                            id="time"
                             required 
                             type="time" 
                             name="time"
@@ -109,8 +113,9 @@ const EventForm = ({ onSubmit }: EventFormProps) => {
                 </div>
 
                 <div>
-                    <label className="form-label">Competition Name</label>
+                    <label htmlFor="competition" className="form-label">Competition Name</label>
                     <input 
+                        id="competition"
                         required 
                         type="text" 
                         name="competition"
