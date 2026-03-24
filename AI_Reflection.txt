@@ -1,0 +1,11 @@
+
+During the development of this Sports Events Calendar, I utilized AI tools primarily as a research 
+and brainstorming assistant rather than as a complete code generator. My goal was to maintain full 
+ownership of the logic and architecture while leveraging AI to speed up the development and learning process.
+
+Specifically, I used AI to:
+- Research best practices for handling and formatting dates in TypeScript, 
+    especially regarding the complexities of rendering a calendar grid,
+    how to add empty space so that date 1 begins under correct day.
+
+- Brainstorm styling approaches to make the UI look clean and responsive using Tailwind CSS.
